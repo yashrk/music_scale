@@ -22,3 +22,29 @@ $ rebar3 eunit
 ```bash
 $ rebar3 ct
 ```
+
+### Explore the library interactive
+
+```bash
+$ rebar3 shell
+```
+
+## Usage
+
+Make given chord from given note:
+```erlang
+1> music_scale:chord_from(<<"a"/utf8>>, {chord, minor_triad}).
+[<<"a">>,<<"c">>,<<"e">>]
+```
+
+Make given interval from given note:
+```erlang
+1> music_scale:interval_from(<<"c"/utf8>>, {interval, third, major}, up).
+<<"e">>
+```
+
+Calculate notes of a given tonality:
+```erlang
+1> music_scale:tonality_from(<<"f"/utf8>>, {scale, natural_major}).
+[<<"f">>,<<"g">>,<<"a">>,<<"b">>,<<"c">>,<<"d">>,<<"e">>]
+```

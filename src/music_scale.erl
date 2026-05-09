@@ -92,6 +92,8 @@ chart_for_scale(Fretboard, Scale, Note) ->
 %% @param Note UTF8 binary with note letter (ATTENTION: German system is used, B is si flat, H is si) with optional alteration.
 %% @param Chord Should be passed as <tt>{chord, chord_atom()}</tt>. To see list of currently known chord atoms with descriptions call {@link known_chords/0}.
 %% ```
+%% 1> music_scale:chord_from(<<"a"/utf8>>, {chord, minor_triad}).
+%% [<<"a">>,<<"c">>,<<"e">>]
 %% '''
 %% @end
 -spec chord_from(text_note(), chord()) -> chord_notes().
@@ -106,6 +108,11 @@ chord_from(Note, Chord) ->
 %% @param Note UTF8 binary with note letter (ATTENTION: German system is used, B is si flat, H is si) with optional alteration.
 %% @param Interval Interval as <tt>{interval, IntervalName}</tt>, where <tt>IntervalName</tt> is an atom.
 %% @param Direction <tt>up</tt> or <tt>down</tt> atom.
+%% ```
+%% 1> music_scale:interval_from(<<"c"/utf8>>, {interval, third, major}, up).
+%% <<"e">>
+%% '''
+%% @end
 -spec interval_from(text_note(), interval(), direction()) -> text_note().
 interval_from(Note, Interval, Direction) ->
     NoteInternal = text_notes:to_internal(Note),
@@ -131,9 +138,15 @@ standard_guitar_fretboard() ->
     fretboard_charts:standard_guitar_fretboard().
 
 
-%% @doc Returns notes of a given scale from a given note.
+%% @doc
+%% Returns notes of a given scale from a given note.
 %% @param Note UTF8 binary with note letter (ATTENTION: German system is used, B is si flat, H is si) with optional alteration.
 %% @param Scale Should be passed as <tt>{scale, scale_atom()}</tt>. To see list of currently known chord atoms with descriptions call {@link known_scales/0}.
+%% ```
+%% 1> music_scale:tonality_from(<<"f"/utf8>>, {scale, natural_major}).
+%% [<<"f">>,<<"g">>,<<"a">>,<<"b">>,<<"c">>,<<"d">>,<<"e">>]
+%% '''
+%% @end
 -spec tonality_from(text_note(), scale()) -> scale_notes().
 tonality_from(Note, Scale) ->
     NoteInternal = text_notes:to_internal(Note),
