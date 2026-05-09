@@ -1,0 +1,6 @@
+@author Yuriy Al. Shirokov <yuriy.shirokov@gmail.com>
+@copyright 2026 Yuriy Al. Shirokov
+@version 0.0.1
+@title Music scale calculator
+@doc Framework for interval, chord and scale calculations. Includes additional functions to calculate fretboard charts.
+

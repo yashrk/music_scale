@@ -1,0 +1,10 @@
+{application, music_scale,
+ [{description, "A music theory library"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications, [kernel,
+                  stdlib]},
+  {env, []},
+  {modules, []},
+  {licenses, ["AGPL-3.0"]},
+  {links, []}]}.
