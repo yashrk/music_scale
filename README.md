@@ -1,7 +1,8 @@
 # Music Scale Calculator
 
 Framework for interval, chord and scale calculations. Includes additional functions to calculate fretboard charts.
-A library to calculate scales and chords.
+
+Opinionated conventions (German notation system — si is H, si flat is B, no pseudo-chords like "Am⁶". Uses scale degrees and pitch classes, so octaves are not used.
 
 ## Build
 
