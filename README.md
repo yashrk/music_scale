@@ -4,6 +4,9 @@ Framework for interval, chord and scale calculations. Includes additional functi
 
 Opinionated conventions (German notation system — si is H, si flat is B, no pseudo-chords like "Am⁶"). Uses scale degrees and pitch classes, so octaves are not used.
 
+Guitar fretboard chart web calculator on Elixir using this library: https://github.com/yashrk/fretboard_chart_calculator/
+Try it online: https://calculator.cicuta.ru/
+
 ## Build
 
 ```bash
